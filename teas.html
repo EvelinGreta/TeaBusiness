@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tealicious</title>
+        <link rel="stylesheet" href="teashop.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon" href="images/favicon/tea.png">
+    </head>
+    <body>
+        <div class="ourteas">
+        <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo" 
+                data-hover="Delicious">
+            Tealicious </a>
+            <ul class="links"> 
+                <li> <a href="about.html"> About </a> </li>
+                <li> <a href="teas.html"> Our Teas </a> </li>
+                <li> <a href="contact.html"> Contact </a> </li>
+                <li> <a href="reviews.html"> Reviews </a> </li>
+            </ul>
+            <a href="#" class="action_btn"> Take a Sip </a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-mug-hot"></i>
+            </div>
+        </nav>
+        <div class="dropdown_menu">
+                <li> <a href="about.html"> About </a> </li>
+                <li> <div id="ourt"> <a href="teas.html"> Our Teas </div> </a> </li>
+                <li> <a href="contact.html"> Contact </a> </li>
+                <li> <a href="reviews.html"> Reviews </a> </li>
+                <li> <a href="#" class="action_btn"> Take a Sip </a> </li>
+        </div>
+        </header>
+    
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+    
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-mug-hot'
+            }
+        </script>
+    
+        <main> 
+            <div class="mainContainerteas">
+                <!--<h1 id="headingteas_first"> Seasonal Favourites </h1>-->
+                <h1 id="headingteas_first"> Our Selection </h1>
+                <div class="grid_container">
+                    <div class="tea-item">
+                        <img src="images/Ayurvedic.jpg" alt="Ayurvedic Tea">
+                        <p>Ayurvedic Tea</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="images/BlackDragon.jpg" alt="Black Dragon Tea">
+                        <p>Black Dragon Tea</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="images/Corsican.jpg" alt="Corsican Tea">
+                        <p>Corsican Tea</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="images/DaHongPao.jpg" alt="Da Hong Pao Tea">
+                        <p>Da Hong Pao Tea</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="images/Gyokuro.jpg" alt="Gyokuro Tea">
+                        <p>Gyokuro Tea</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="images/Jasmine.jpg" alt="Jasmine Tea">
+                        <p>Jasmine Tea</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="images/JasmineFlower.jpg" alt="Jasmine Flower Tea">
+                        <p>Jasmine Flower Tea</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="images/Junshan.jpg" alt="Junshan Tea">
+                        <p>Junshan Tea</p>
+                    </div>
+                    <div class="tea-item">
+                        <img src="images/TieGuanYin.jpg" alt="Tie Guan Yin Tea">
+                        <p>Tie Guan Yin Tea</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </div>
+    </body>
+</html>

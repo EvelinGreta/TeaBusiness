@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tealicious</title>
+        <link rel="stylesheet" href="teashop.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon" href="images/favicon/tea.png">
+    </head>
+    <body>
+        <div class="about">
+        <header>
+        <nav class="navbar">
+            <a href="home.html" class="logo" 
+                data-hover="Delicious">
+            Tealicious </a>
+            <ul class="links"> 
+                <li> <a href="about.html"> About </a> </li>
+                <li> <a href="teas.html"> Our Teas </a> </li>
+                <li> <a href="contact.html"> Contact </a> </li>
+                <li> <a href="reviews.html"> Reviews </a> </li>
+            </ul>
+            <a href="#" class="action_btn"> Take a Sip </a>
+            <div class="toggle_btn">
+                <i class="fa-solid fa-mug-hot"></i>
+            </div>
+        </nav>
+        <div class="dropdown_menu">
+                <li> <a href="about.html"> About </a> </li>
+                <li> <div id="ourt"> <a href="teas.html"> Our Teas </div> </a> </li>
+                <li> <a href="contact.html"> Contact </a> </li>
+                <li> <a href="reviews.html"> Reviews </a> </li>
+                <li> <a href="#" class="action_btn"> Take a Sip </a> </li>
+        </div>
+        </header>
+    
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+    
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+    
+                toggleBtnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'
+                : 'fa-solid fa-mug-hot'
+            }
+        </script>
+    
+        <main> 
+        <div class="mainContainer">
+            <h1 id="headingabout_first"> Our Story </h1>
+            <br>
+            <div class="maintext">
+            <img id=thekettle src="images/thekettle.jpg" alt="the old kettle">
+            <p id="parabout_first"> Tealicious was founded in 1999 with the promise of delivering specialty teas from around the world. The company began in a spare room in the heart of Berlin, starting with nothing but a special tea brought back from Corsica. Initially, it was sold only to neighbours and acquaintances of the owners. However, from the earnings of that first batch, a company was born. </p>
+            <br>
+            <p> After the first Corsican tea, many others followed. The owners brought back a special tea each time they travelled, and over time, the small business flourished into a legend.</p>
+            <br>
+            <img id="teahouse" src="images/teehouse.jpg" alt="original teahouse">
+            <p> In 2003, the first official tea house was opened under the business name 'Tealicious,' marking the beginning of many successful years to come. </p>
+            <br>
+            <p> As of now, the company imports tea from over 100 countries, offering delicacies to customers in Germany, Switzerland, Spain, England, and France. </p>
+            <br>
+            <p> With the current goal of expanding internationally, the sky is the limit for the company—at least for now… </p>
+            <br>
+            <img id="plantation" src="images/plantation.light.3.jpg" alt="plantation">
+            <img id="teamaking" src="images/teamaking.jpg" alt="teamaking">
+            <br>
+            <p id="parabout_last"> "Our company is deeply committed to ethical sourcing for all of our ingredients. We work closely with trusted suppliers who share our values of sustainability, fair trade, and respect for the environment. By ensuring that every step of our supply chain meets rigorous ethical standards, we not only support the communities who grow and harvest our teas but also deliver products that you can feel good about enjoying." </p>
+        </div>
+        </div>
+        </main>
+        </div>
+</body>
+</html>

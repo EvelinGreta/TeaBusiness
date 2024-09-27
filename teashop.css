@@ -1,0 +1,629 @@
+/*body{
+    background-image: url("images/background8.jpg");
+    background-color:black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    margin: 0px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#headingfirst{
+    text-align: center;
+}
+
+.navbar ul{
+    list-style-type: none;
+    background-color: #676772;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    position: fixed;
+    background-size: ;
+
+}
+.navbar a{
+    color: #FFD19F;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.navbar a:hover{
+    background-color: rgb(19, 19, 20);
+    color: rgb(169, 121, 203);
+}
+.navbar li{
+    float: left;
+}
+main{
+    margin: 20px
+}*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+/*body{
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+}*/
+
+.home{
+    background-image: url("images/background8.jpg");
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+}
+
+/*NAVBAR*/
+
+li{
+    list-style: none;
+}
+
+.navbar a{
+    color: rgb(0, 0, 0);
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: flex;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .links{
+    font-size: 20px;
+    display: flex;
+    gap: 15%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar .links a:hover{
+    background-color: rgb(82, 82, 82);
+    color: rgb(121, 203, 131);
+}
+
+.navbar:hover .logo{
+        font-size: 0;
+}
+
+.navbar:hover .logo::after{
+        content: attr(data-hover);
+        font-size: 30px;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: auto;
+    margin: 0 auto;
+    display: flex;
+    position: fixed;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #676772;
+    background-size: 100% 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    top: 0;
+}
+
+.navbar .logo{
+    width: 60px;
+    font-size: 30px;
+    font-weight: bold;
+    margin-left: 40px;
+    background: none;
+}
+
+
+.navbar .toggle_btn{
+    color: black;
+    font-size: 30px;
+    cursor: grab;
+    display: none;
+}
+
+/*.logo:hover{
+    font-size: 0;
+}
+
+.logo:hover:after{
+    content: attr(data-hover);
+    font-size: 30px;
+}*/
+
+.action_btn{
+    background-color: rgb(122, 194, 103);
+    color: black;
+    margin-right: 40px;
+    padding: 8px 30px;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: grab;
+    transition: scale 0.2 ease;
+}
+
+.action_btn:hover{
+    scale: 1.05;
+    background-color: rgb(82, 82, 82);
+    color: rgb(121, 203, 131);
+}
+
+.action_btn:active{
+    scale: 0.95;
+}
+
+/*DROPDOWN MENU*/
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 32px;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 230px;
+}
+
+.dropdown_menu li{
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_btn{
+    width: 100%;
+    margin-right: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/*MEDIA*/
+
+@media(max-width: 1250px){
+    .navbar .links,
+    .navbar .action_btn{
+        display:none
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu{
+        display: block;
+    }
+}
+
+@media(max-width: 600px){
+    .dropdown_menu{
+        left: 32px;
+        width: unset;
+        display: block;
+        position: fixed;
+    }
+}
+
+/*HEADINGS*/
+
+.headingshome{
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#headinghome_first{
+    font-size: 60px;
+    color: rgba(225, 239, 208, 0.853);
+    margin-right: 120px;
+}
+
+#headinghome_second{
+    font-size: 35px;
+    color: rgba(211, 239, 174, 0.853);
+    margin-left: 120px;
+}
+
+/*ABOUT*/
+
+#thekettle{
+    max-width: 320px;
+    float: left;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.about{
+    background-image: url("images/background8.jpg");
+    /*height: 100vh;*/
+    background-color: black(221, 122, 122);
+    background-size: cover;
+    background-position: center;
+    padding-top: 170px;
+    padding-bottom: 170px;
+    min-height: 100% 100%;
+}
+
+.mainContainer{
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgba(233, 245, 220, 0.885);
+    box-shadow: 2px 2px 1px rgba(50, 50, 50, 0.75);
+    /*height: calc(100vh - 60px);*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: fit-content;
+    /*border: none;
+    outline: none;
+    border-radius: 30px;*/
+}
+
+#headingabout_first{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+/*#parabout_first{
+    padding-top: 30px;
+    margin: 20px 40px 20px 40px;
+}*/
+
+.maintext{
+    padding-top: 10px;
+    margin: 20px 100px 20px 100px;
+    font-size: 22px;
+    text-align: justify;
+}
+
+#teahouse{
+    max-width: 320px;
+    float: left;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+#plantation{
+    width: 320px;
+    float: left;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 180px;
+}
+
+#teamaking{
+    width: 320px;
+    float: right;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-right: 20px;
+    height: 180px;
+}
+
+#parabout_last{
+    clear: right;
+    padding-top: 40px;
+}
+
+@media(max-width: 1250px){
+    .mainContainer{
+        width: 90%;
+    }
+}
+
+@media(max-width: 980px){
+    #thekettle, #teahouse, #plantation, #teamaking{
+        clear: both;
+        display: block;
+        margin: 20px auto;
+    }
+}
+
+@media(max-width: 600px){
+    .maintext{
+        margin: 20px 20px 20px 20px;
+    }
+    #thekettle, #teahouse, #plantation, #teamaking{
+        clear: both;
+        display: block;
+        margin: 20px auto;
+        max-width: 100%;
+        width: 90%;
+    }
+}
+
+/*OurTeas*/
+
+.ourteas{
+    background-image: url("images/background8.jpg");
+    /*height: 100vh;*/
+    background-color: rgba(225, 239, 208, 0.853);
+    background-size: cover;
+    background-position: center;
+    padding-top: 150px;
+    padding-bottom: 170px;
+    min-height: 100% 100%;
+}
+
+.mainContainerteas{
+    margin: 0 auto;
+    width: 70%;
+    background-color: rgba(255, 255, 255, 0.885);
+    box-shadow: 2px 2px 1px rgba(50, 50, 50, 0.75);
+    /*height: calc(100vh - 60px);*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: fit-content;
+    /*border: none;
+    outline: none;
+    border-radius: 30px;*/
+}
+
+#headingteas_first{
+    font-size: 40px;
+    color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+    margin-bottom: 60px;
+}
+
+.grid_container{
+    display: grid;
+    color: rgb(122, 30, 30);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-bottom: 40px;
+}
+
+.tea-item{
+    text-align: center;
+}
+
+.tea-item img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tea-item p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: rgb(122, 30, 30);
+    font-weight: bold;
+}
+
+@media(max-width: 1000px){
+    .grid_container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .mainContainerteas{
+        width: 90%;
+    }
+}
+
+@media(max-width: 650px){
+    .grid_container{
+        grid-template-columns: 1fr;
+    }
+    .mainContainerteas{
+        width: 90%;
+    }
+}
+
+/*CONTACT PAGE*/
+
+.contactpage{
+    background-image: url("images/background8.jpg");
+    /*height: 100vh;*/
+    background-color: rgba(225, 239, 208, 0.853);
+    background-size: cover;
+    background-position: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 100% 100%;
+}
+
+.contact-container{
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#Contact{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(89, 141, 75);
+}
+
+.contact-info{
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+.contact-info p{
+    margin-bottom: 10px;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form label{
+    margin-bottom: 8px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea{
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline: none;
+    border-color: #777;
+}
+
+#submit{
+    padding: 12px 20px;
+    font-size: 18px;
+    color: white;
+    background-color:rgb(122, 194, 103);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit:hover{
+    background-color: #388525;
+}
+
+/*SUBMIT*/
+
+.submitpage{
+    background-image: url("images/background8.jpg");
+    /*height: 100vh;*/
+    background-color: rgba(225, 239, 208, 0.853);
+    background-size: cover;
+    background-position: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 100vh;
+}
+
+.submit-container{
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#Thank_you{
+    text-align: center;
+    margin-bottom: 20px;
+    color: rgb(89, 141, 75);
+}
+
+#in_touch{
+    margin-bottom: 30px;
+    text-align: center;
+    line-height: 1.6;
+}
+
+#backtohome{
+    display: inline-block;
+    margin: 30px auto;
+    color: rgb(239, 158, 19);
+    text-decoration: none;
+}
+
+.backcontainer{
+    text-align: center;
+}
+
+/*REVIEWS*/
+
+.reviews_page{
+    background-image: url("images/background8.jpg");
+    /*height: 100vh;*/
+    background-color: rgba(225, 239, 208, 0.853);
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px;
+    padding-bottom: 80px;
+    min-height: 100vh;
+}
+
+.reviews-container{
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#review_h{
+    text-align: center;
+    margin-bottom: 40px;
+    color:rgb(89, 141, 75);
+}
+
+.review-card{
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.review-card h3{
+    margin-bottom: 10px;
+    color: #000000;
+}
+
+.review-card .review-summary{
+    font-weight: bold;
+    margin-bottom: 10px;
+    color:rgb(89, 141, 75);
+}
+
+.review-card p{
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+@media(max-width: 768px){
+    .reviews-container{
+            width: 90%;
+    }
+}
