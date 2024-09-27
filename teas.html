@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="teashop.css" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="icon" type="image/x-icon" href="images/favicon/tea.png">
+        <script defer src="teashop.js"></script>
     </head>
     <body>
         <div class="ourteas">
@@ -34,22 +35,6 @@
                 <li> <a href="#" class="action_btn"> Take a Sip </a> </li>
         </div>
         </header>
-    
-        <script>
-            const toggleBtn = document.querySelector('.toggle_btn')
-            const toggleBtnIcon = document.querySelector('.toggle_btn i')
-            const dropDownMenu = document.querySelector('.dropdown_menu')
-    
-            toggleBtn.onclick = function () {
-                dropDownMenu.classList.toggle('open')
-                const isOpen = dropDownMenu.classList.contains('open')
-    
-                toggleBtnIcon.classList = isOpen
-                ? 'fa-solid fa-xmark'
-                : 'fa-solid fa-mug-hot'
-            }
-        </script>
-    
         <main> 
             <div class="mainContainerteas">
                 <!--<h1 id="headingteas_first"> Seasonal Favourites </h1>-->
