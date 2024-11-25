@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tealicious</title>
+    <link rel="stylesheet" href="teashop.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image/x-icon" href="images/favicon/tea.png">
+    <script defer src="teashop.js"></script>
+</head>
+<body>
+    <div class="orderteas">
+    <header>
+    <nav class="navbar">
+        <a href="home.html" class="logo" 
+            data-hover="Delicious">
+        Tealicious </a>
+        <ul class="links"> 
+            <li> <a href="about.html"> About </a> </li>
+            <li> <a href="teas.html"> Our Teas </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+            <li> <a href="reviews.html"> Reviews </a> </li>
+        </ul>
+        <div class="icon-wrapper">
+            <img id="icon"  src="images/moon.png">
+        </div>
+        <a href="#" class="action_btn"> Take a Sip </a>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-mug-hot"></i>
+        </div>
+    </nav>
+    <div class="dropdown_menu">
+            <li> <a href="about.html"> About </a> </li>
+            <li> <div id="ourt"> <a href="teas.html"> Our Teas </div> </a> </li>
+            <li> <a href="contact.html"> Contact </a> </li>
+            <li> <a href="reviews.html"> Reviews </a> </li>
+            <li> <a href="orderteas.html" class="action_btn"> Take a Sip </a> </li>
+    </div>
+    </header>
+    <main>
+        <div class="orders-container">
+            <h1 id="order_here"> Take a Sip - Order Your Favourite Teas </h1>
+            <p id="intro_text"> Explore our exquisite selection of teas and experience the essence of flavor with every sip. Select your preferred teas from our curated collection, crafted to perfection with the finest ingredients from around the world. </p>
+            
+            <form action="tyforpurchase.html" class="order-form" method="get">
+                <label for="teas">Choose your tea:</label>
+                <select name="teas" id="teas">
+                    <option value="tea1"> Ayurvedic Tea </option>
+                    <option value="tea2"> Black Dragon Tea </option>
+                    <option value="tea3"> Corsican Tea </option>
+                    <option value="tea4"> Da Hong Pao Tea </option>
+                    <option value="tea5"> Gyokuro Tea </option>
+                    <option value="tea6"> Jasmine Pearl Tea </option>
+                    <option value="tea7"> Jasmine Flower Tea </option>
+                    <option value="tea8"> Jun Shan Yin Zhen Tea </option>
+                    <option value="tea9"> Tie Guan Yin Tea </option>
+                    <!--{% for tea in teas %}
+                    <option value="{{ tea.id }}"> {{ tea.product_name }} </option>
+                    {% endfor %}
+                -->
+                </select>
+                <br>
+                <label for="customer_name">Your Name:</label>
+                <input type="text" id="customer_name" name="customer_name" required>
+                <label for="customer_email">Your Email:</label>
+                <input type="email" id="customer_email" name="customer_email" required>
+                <label for="customer_phone">Your Phone Number:</label>
+                <input type="tel" id="customer_phone" name="customer_phone" required>
+                <label for="customer_address">Your Address:</label>
+                <input type="text" id="customer_address" name="customer_address" required>
+                <input type="submit" id="submit_order" value="Place Order">
+            </form>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
+
+            <!--
+            <form action="tyforpurchase.html" class="order-form" method="get">
+                <label for="teas">Choose your tea:</label>
+                <select name="teas" id="teas">
+                <option value="ayurvedic"> Ayurvedic Tea </option>
+                <option value="black_dragon"> Black Dragon Tea </option>
+                <option value="corsican"> Corsican Tea </option>
+                <option value="dahongpao"> Da Hong Pao Tea </option>
+                <option value="gyokuro"> Gyokuro Tea </option>
+                <option value="jasmine_pearl"> Jasmine Pearl Tea </option>
+                <option value="jasmine_flower"> Jasmine Flower Tea </option>
+                <option value="junshan"> Jun Shan Yin Zhen Tea </option>
+                <option value="tieguanyin"> Tie Guan Yin Tea </option>
+                </select>
+                <input type="submit" id="submit_order" value="Choose"/>
+            </form>
+        </div>
+    </main>
+    </div>
+</body>
+</html>
+-->

@@ -55,13 +55,61 @@ main{
     background-position: center;
 }*/
 
-.home{
-    background-image: url("images/background8.jpg");
+/*QUOTE API*/
+
+.center-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100vh;
-    background-color: black;
-    background-size: cover;
-    background-position: center;
+    color: rgba(232, 242, 219, 0.955);
+    font-size: 30px;
 }
+
+.card {
+    margin: 0 auto;
+    padding: 1rem;
+    max-width: 50%;
+}
+
+.card-body {
+    padding: 40px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    color: var(--new-quote-button);  
+    background-color: var(--new-quote-button-background); 
+    border: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s, transform 0.3s;
+    cursor: pointer;     
+    font-size: 18px;
+}
+
+.btn:hover {
+    background-color: var(--new-quote-button-background-hover);
+    transform: scale(1.05);
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 600px) {
+    .card {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 600px) {
+    .center-container {
+        font-size: 22px;
+    }
+}
+
 
 /*NAVBAR*/
 
@@ -70,7 +118,7 @@ li{
 }
 
 .navbar a{
-    color: rgb(0, 0, 0);
+    color: var(--primary-color);
     white-space: nowrap;
     text-decoration: none;
     padding: 10px 20px;
@@ -81,7 +129,8 @@ li{
 .navbar .links{
     font-size: 20px;
     display: flex;
-    gap: 15%;
+    gap: 10%;
+    margin-left: 120px;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -89,7 +138,7 @@ li{
 
 .navbar .links a:hover{
     background-color: rgb(82, 82, 82);
-    color: rgb(121, 203, 131);
+    color: var(--primary-hover-color);
 }
 
 .navbar:hover .logo{
@@ -118,6 +167,7 @@ li{
 }
 
 .navbar .logo{
+    display: inline;
     width: 60px;
     font-size: 30px;
     font-weight: bold;
@@ -127,10 +177,31 @@ li{
 
 
 .navbar .toggle_btn{
-    color: black;
+    color: var(--teacup-color);
     font-size: 30px;
     cursor: grab;
     display: none;
+}
+
+.navbar #icon{
+    width: 30px;
+    cursor: pointer;
+}
+
+nav ul{
+    flex: 1;
+    text-align: center;
+}
+
+.navbar #icon:hover{
+    transform: scale(1.10);
+}
+
+.icon-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
 }
 
 /*.logo:hover{
@@ -143,8 +214,8 @@ li{
 }*/
 
 .action_btn{
-    background-color: rgb(122, 194, 103);
-    color: black;
+    background-color: var(--button-color-background);
+    color: var(--button-color);
     margin-right: 40px;
     padding: 8px 30px;
     border: none;
@@ -158,17 +229,103 @@ li{
 
 .action_btn:hover{
     scale: 1.05;
-    background-color: rgb(82, 82, 82);
-    color: rgb(121, 203, 131);
+    background-color: var(--button-color-background-hover);
+    color: var(--button-color-hover);
 }
 
 .action_btn:active{
     scale: 0.95;
 }
 
+/*DARK MODE*/
+:root{
+    --primary-background: url("images/background8.jpg");
+    --primary-color: black;
+    --teacup-color: black;
+    --primary-hover-color:rgb(121, 203, 131);
+    --button-color-background: rgb(122, 194, 103);
+    --button-color:black;
+    --button-color-background-hover:rgb(82, 82, 82);
+    --button-color-hover:rgb(121, 203, 131);
+    --primary-heading-home-color1:rgba(225, 239, 208, 0.853);
+    --primary-heading-home-color2:rgba(211, 239, 174, 0.853);
+    --container-about:rgba(233, 245, 220, 0.885);
+    --text-about: black;
+    --ourteas-container:rgba(255, 255, 255, 0.885);
+    --ourteas-heading:rgb(0, 0, 0);
+    --ourteas-text:rgb(122, 30, 30);
+    --modal-color: white;
+    --ourteas-popup-heading:black;
+    --ourteas-popup-text:black;
+    --contact-container:white;
+    --contact-heading: rgb(89, 141, 75);
+    --contact-text: black;
+    --contact-button-background: rgb(122, 194, 103);
+    --contact-button:white;
+    --contact-button-background-hover:rgb(56, 133, 37);
+    --contact-inputfield: white;
+    --submit-container:white;
+    --submit-heading:black;
+    --submit-text1:black;
+    --submit-text2:rgb(239, 158, 19);
+    --reviews-container:white;
+    --reviews-heading:rgb(89, 141, 75);
+    --reviews-small-containers:rgb(249, 249, 249);
+    --reviews-rating: rgb(89, 141, 75);
+    --reviews-text: black;
+    --x-button: black;
+    --new-quote-button:rgba(225, 239, 208, 0.853);
+    --new-quote-button-background:rgb(21,22,21);
+    --new-quote-button-background-hover:rgb(121, 203, 131);
+    --dropdown-items:black;
+}
+
+.dark_theme{
+    --primary-background: url("images/darkbackground12.jpg");
+    --primary-color: rgb(213, 213, 213);
+    --teacup-color:white;
+    --primary-hover-color:rgb(186, 109, 181);
+    --button-color-background:rgb(146, 77, 124);
+    --button-color:rgb(213, 213, 213);
+    --button-color-background-hover:rgb(82, 82, 82);
+    --button-color-hover:rgb(186, 109, 181);
+    --primary-heading-home-color1:rgba(248, 203, 118, 0.882);
+    --primary-heading-home-color2:rgba(254, 225, 178, 0.901);
+    --container-about:rgb(146, 77, 124, 0.807);
+    --text-about:rgb(213, 213, 213);
+    --ourteas-container:rgba(184, 122, 164, 0.807);
+    --ourteas-heading:rgb(246, 245, 245);
+    --ourteas-text:white;
+    --modal-color: rgb(33, 33, 33);
+    --ourteas-popup-heading:rgb(213, 213, 213);
+    --ourteas-popup-text:rgb(213, 213, 213);
+    --contact-container: rgb(33, 33, 33);
+    --contact-heading:rgb(186, 109, 181);
+    --contact-text:rgb(213, 213, 213);
+    --contact-button-background:rgb(169, 101, 165);
+    --contact-button:rgb(33, 33, 33);
+    --contact-button-background-hover:rgb(209, 124, 204);
+    --contact-inputfield: rgb(213, 213, 213);
+    --submit-container:rgb(33, 33, 33);
+    --submit-heading:rgb(213, 213, 213);
+    --submit-text1:rgb(213, 213, 213);
+    --submit-text2:rgb(209, 124, 204);
+    --reviews-container:rgb(33, 33, 33);
+    --reviews-heading:rgb(186, 109, 181);
+    --reviews-small-containers:rgb(21, 20, 20);
+    --reviews-rating:rgb(186, 109, 181);
+    --reviews-text:rgb(213, 213, 213);
+    --x-button: white;
+    --new-quote-button:rgb(213, 213, 213);
+    --new-quote-button-background:rgb(21,22,21);
+    --new-quote-button-background-hover:rgb(186, 109, 181);
+    --dropdown-items:white;
+}
+
 /*DROPDOWN MENU*/
 
 .dropdown_menu{
+    text-decoration: none;
     display: none;
     position: absolute;
     right: 32px;
@@ -180,6 +337,12 @@ li{
     border-radius: 10px;
     overflow: hidden;
     transition: .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu li a {
+    color: var(--dropdown-items);
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .dropdown_menu.open{
@@ -198,6 +361,8 @@ li{
     margin-right: 0;
     display: flex;
     justify-content: center;
+    color: var(--dropdown-items);
+    background-color: var(--button-color-background);
 }
 
 /*MEDIA*/
@@ -226,7 +391,35 @@ li{
     }
 }
 
-/*HEADINGS*/
+@media (max-width: 600px) {
+    .navbar #icon {
+        position: absolute;
+        right: 20px;
+        margin-right: 30px;
+        top: 15px;
+        transform: none;
+    }
+}
+
+@media(max-width: 1250px){
+    .navbar #icon {
+        position: absolute;
+        right: 20px;
+        margin-right: 30px;
+        top: 15px;
+        transform: none;
+    }
+}
+
+/*HOME*/
+
+.home{
+    background-image: var(--primary-background);
+    height: 100vh;
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+}
 
 .headingshome{
     height: calc(100vh - 60px);
@@ -237,16 +430,43 @@ li{
     text-align: center;
 }
 
+#headinghome_first:hover{
+    scale: 1.05;
+}
+
+#headinghome_second:hover{
+    scale: 1.05;
+}
+
+.quote_ref{
+text-decoration: none;
+color: inherit;
+}
+
 #headinghome_first{
     font-size: 60px;
-    color: rgba(225, 239, 208, 0.853);
+    color: var(--primary-heading-home-color1);
     margin-right: 120px;
 }
 
 #headinghome_second{
     font-size: 35px;
-    color: rgba(211, 239, 174, 0.853);
+    color: var(--primary-heading-home-color2);
     margin-left: 120px;
+}
+
+@media (max-width: 600px) {
+    #headinghome_first {
+       font-size: 35px;
+       margin-left: 10px;
+    }
+}
+
+@media (max-width: 600px) {
+    #headinghome_second {
+       font-size: 20px;
+       margin-right: 10px;
+    }
 }
 
 /*ABOUT*/
@@ -260,7 +480,7 @@ li{
 }
 
 .about{
-    background-image: url("images/background8.jpg");
+    background-image: var(--primary-background);
     /*height: 100vh;*/
     background-color: black(221, 122, 122);
     background-size: cover;
@@ -273,7 +493,7 @@ li{
 .mainContainer{
     margin: 0 auto;
     width: 70%;
-    background-color: rgba(233, 245, 220, 0.885);
+    background-color: var(--container-about);
     box-shadow: 2px 2px 1px rgba(50, 50, 50, 0.75);
     /*height: calc(100vh - 60px);*/
     padding-top: 40px;
@@ -286,7 +506,7 @@ li{
 
 #headingabout_first{
     font-size: 40px;
-    color: rgb(0, 0, 0);
+    color: var(--text-about);
     display: flex;
     justify-content: center;
     text-decoration: underline;
@@ -302,6 +522,7 @@ li{
     margin: 20px 100px 20px 100px;
     font-size: 22px;
     text-align: justify;
+    color: var(--text-about);
 }
 
 #teahouse{
@@ -346,6 +567,7 @@ li{
         clear: both;
         display: block;
         margin: 20px auto;
+        float: none;
     }
 }
 
@@ -356,6 +578,7 @@ li{
     #thekettle, #teahouse, #plantation, #teamaking{
         clear: both;
         display: block;
+        float: none;
         margin: 20px auto;
         max-width: 100%;
         width: 90%;
@@ -365,7 +588,7 @@ li{
 /*OurTeas*/
 
 .ourteas{
-    background-image: url("images/background8.jpg");
+    background-image: var(--primary-background);
     /*height: 100vh;*/
     background-color: rgba(225, 239, 208, 0.853);
     background-size: cover;
@@ -378,7 +601,7 @@ li{
 .mainContainerteas{
     margin: 0 auto;
     width: 70%;
-    background-color: rgba(255, 255, 255, 0.885);
+    background-color: var(--ourteas-container);
     box-shadow: 2px 2px 1px rgba(50, 50, 50, 0.75);
     /*height: calc(100vh - 60px);*/
     padding-top: 40px;
@@ -391,7 +614,7 @@ li{
 
 #headingteas_first{
     font-size: 40px;
-    color: rgb(0, 0, 0);
+    color: var(--ourteas-heading);
     display: flex;
     justify-content: center;
     text-decoration: underline;
@@ -400,7 +623,7 @@ li{
 
 .grid_container{
     display: grid;
-    color: rgb(122, 30, 30);
+    color: var(--ourteas-text);
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 30px;
@@ -424,12 +647,95 @@ li{
     scale: 1.05;
 }
 
+.tea-item h1{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: var(--ourteas-text);
+    font-weight: bold;
+}
+
 .tea-item p{
     margin-top: 10px;
     margin-bottom: 20px;
     font-size: 18px;
-    color: rgb(122, 30, 30);
+    color: var(--ourteas-popup-text);
+    text-align: left;
+}
+
+.tea-item #price{
+    font-weight: normal;
+}
+
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    border: 1px solid black;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: var(--modal-color);
+    width: 800px;
+    max-width: 80%;
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+
+}
+
+.modal_header{
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+}
+
+.modal_header .title{
+    font-size: 25px;
     font-weight: bold;
+    color: var(--ourteas-popup-heading);
+}
+
+.modal_header .close_button{
+    color: var(--x-button);
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.open_Button{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+.modal_body{
+    padding: 10px 15px;
+}
+
+#overlay{
+    position: fixed;
+    transition: 200ms ease-in-out;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
 }
 
 @media(max-width: 1000px){
@@ -453,7 +759,7 @@ li{
 /*CONTACT PAGE*/
 
 .contactpage{
-    background-image: url("images/background8.jpg");
+    background-image: var(--primary-background);
     /*height: 100vh;*/
     background-color: rgba(225, 239, 208, 0.853);
     background-size: cover;
@@ -467,7 +773,7 @@ li{
     max-width: 600px;
     margin: 100px auto;
     padding: 20px;
-    background-color: white;
+    background-color: var(--contact-container);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -475,7 +781,7 @@ li{
 #Contact{
     text-align: center;
     margin-bottom: 20px;
-    color: rgb(89, 141, 75);
+    color: var(--contact-heading);
 }
 
 .contact-info{
@@ -486,6 +792,7 @@ li{
 
 .contact-info p{
     margin-bottom: 10px;
+    color: var(--contact-text);
 }
 
 .contact-form{
@@ -496,6 +803,7 @@ li{
 .contact-form label{
     margin-bottom: 8px;
     font-weight: bold;
+    color: var(--contact-text);
 }
 
 .contact-form input,
@@ -506,6 +814,7 @@ li{
     border: 1px solid #ddd;
     border-radius: 5px;
     width: 100%;
+    background-color: var(--contact-inputfield);
 }
 
 .contact-form input:focus,
@@ -517,8 +826,8 @@ li{
 #submit{
     padding: 12px 20px;
     font-size: 18px;
-    color: white;
-    background-color:rgb(122, 194, 103);
+    color: var(--contact-button);
+    background-color:var(--contact-button-background);
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -526,13 +835,13 @@ li{
 }
 
 #submit:hover{
-    background-color: #388525;
+    background-color: var(--contact-button-background-hover);
 }
 
 /*SUBMIT*/
 
 .submitpage{
-    background-image: url("images/background8.jpg");
+    background-image: var(--primary-background);
     /*height: 100vh;*/
     background-color: rgba(225, 239, 208, 0.853);
     background-size: cover;
@@ -546,15 +855,16 @@ li{
     max-width: 600px;
     margin: 100px auto;
     padding: 20px;
-    background-color: white;
+    background-color: var(--submit-container);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    color:var(--submit-text1);
 }
 
 #Thank_you{
     text-align: center;
     margin-bottom: 20px;
-    color: rgb(89, 141, 75);
+    color: var(--submit-heading);
 }
 
 #in_touch{
@@ -566,7 +876,7 @@ li{
 #backtohome{
     display: inline-block;
     margin: 30px auto;
-    color: rgb(239, 158, 19);
+    color: var(--submit-text2);
     text-decoration: none;
 }
 
@@ -577,7 +887,7 @@ li{
 /*REVIEWS*/
 
 .reviews_page{
-    background-image: url("images/background8.jpg");
+    background-image: var(--primary-background);
     /*height: 100vh;*/
     background-color: rgba(225, 239, 208, 0.853);
     background-size: cover;
@@ -591,7 +901,7 @@ li{
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
-    background-color: white;
+    background-color: var(--reviews-container);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
 }
@@ -599,11 +909,11 @@ li{
 #review_h{
     text-align: center;
     margin-bottom: 40px;
-    color:rgb(89, 141, 75);
+    color:var(--reviews-heading);
 }
 
 .review-card{
-    background-color: #f9f9f9;
+    background-color: var(--reviews-small-containers);
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
@@ -612,22 +922,102 @@ li{
 
 .review-card h3{
     margin-bottom: 10px;
-    color: #000000;
+    color: var(--reviews-text);
 }
 
 .review-card .review-summary{
     font-weight: bold;
     margin-bottom: 10px;
-    color:rgb(89, 141, 75);
+    color:var(--reviews-rating);
 }
 
 .review-card p{
     font-size: 16px;
     line-height: 1.6;
+    color: var(--reviews-text);
 }
 
 @media(max-width: 768px){
     .reviews-container{
             width: 90%;
     }
+}
+
+
+/*CONTACT PAGE*/
+
+.orderteas{
+    background-image: var(--primary-background);
+    /*height: 100vh;*/
+    background-color: rgba(225, 239, 208, 0.853);
+    background-size: cover;
+    background-position: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    min-height: 100% 100%;
+}
+
+.orders-container{
+    max-width: 600px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: var(--contact-container);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+#order_here{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--contact-heading);
+}
+
+#intro_text{
+    text-align: center;
+    margin-bottom: 20px;
+    color: var(--contact-heading);
+}
+
+
+.order-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.order-form label{
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--contact-text);
+}
+
+.order-form input,
+.order-form textarea{
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    background-color: var(--contact-inputfield);
+}
+
+.order-form input:focus,
+.order-form textarea:focus{
+    outline: none;
+    border-color: #777;
+}
+
+#submit_order{
+    padding: 12px 20px;
+    font-size: 18px;
+    color: var(--contact-button);
+    background-color:var(--contact-button-background);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#submit_order:hover{
+    background-color: var(--contact-button-background-hover);
 }

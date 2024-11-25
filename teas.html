@@ -22,7 +22,10 @@
                 <li> <a href="contact.html"> Contact </a> </li>
                 <li> <a href="reviews.html"> Reviews </a> </li>
             </ul>
-            <a href="#" class="action_btn"> Take a Sip </a>
+            <div class="icon-wrapper">
+                <img id="icon"  src="images/moon.png">
+            </div>
+            <a href="orderteas.html" class="action_btn"> Take a Sip </a>
             <div class="toggle_btn">
                 <i class="fa-solid fa-mug-hot"></i>
             </div>
@@ -32,7 +35,7 @@
                 <li> <div id="ourt"> <a href="teas.html"> Our Teas </div> </a> </li>
                 <li> <a href="contact.html"> Contact </a> </li>
                 <li> <a href="reviews.html"> Reviews </a> </li>
-                <li> <a href="#" class="action_btn"> Take a Sip </a> </li>
+                <li> <a href="orderteas.html" class="action_btn"> Take a Sip </a> </li>
         </div>
         </header>
         <main> 
@@ -41,44 +44,135 @@
                 <h1 id="headingteas_first"> Our Selection </h1>
                 <div class="grid_container">
                     <div class="tea-item">
-                        <img src="images/Ayurvedic.jpg" alt="Ayurvedic Tea">
-                        <p>Ayurvedic Tea</p>
+                        <button class="open_Button" data-modal-target="#modal1"><img src="images/Ayurvedic.jpg" alt="Ayurvedic Tea"></button>
+                        <h1>Ayurvedic Tea</h1>
+                        <div class="modal" id="modal1">
+                            <div class="modal_header">
+                                <div class="title"> Ayurvedic Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> Made with unique blends of herbs for a harmonious flavour, non-caffeinated. As per ancient traditions, these teas are used to balance the body and the mind. </p>
+                                <p id="price"> £62 Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="tea-item">
-                        <img src="images/BlackDragon.jpg" alt="Black Dragon Tea">
-                        <p>Black Dragon Tea</p>
+                        <button class="open_Button" data-modal-target="#modal2"><img src="images/BlackDragon.jpg" alt="Black Dragon Tea"></button>
+                        <h1>Black Dragon Tea</h1>
+                        <div class="modal" id="modal2">
+                            <div class="modal_header">
+                                <div class="title"> Black Dragon Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> A satisfying, flavourful blend of oolong tea, originally sourced from Taiwan. Made from the large leaves of the Camellia sinensis plant, which gets partially oxidised to create a unique flavour profile, that is neither fully black or green. </p>
+                                <p id="price"> £400 Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="tea-item">
-                        <img src="images/Corsican.jpg" alt="Corsican Tea">
-                        <p>Corsican Tea</p>
+                        <button class="open_Button" data-modal-target="#modal3"><img src="images/Corsican.jpg" alt="Corsican Tea"></button>
+                        <h1>Corsican Tea</h1>
+                        <div class="modal" id="modal3">
+                            <div class="modal_header">
+                                <div class="title"> Corsican Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> A caffeine-free tea that celebrates the glorious pears of the Corsican Island. This tea used to be enjoyed by the Romans, who drank it with honey and spices. The tea is a blend of corsican pears, spices, and African red rooibos. Can be used both as a cold or warm tea, either to refresh or cozy up near a fireplace, while the smell of the spices engulf your mind. </p>
+                                <p id="price"> £150 Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="tea-item">
-                        <img src="images/DaHongPao.jpg" alt="Da Hong Pao Tea">
-                        <p>Da Hong Pao Tea</p>
+                        <button class="open_Button" data-modal-target="#modal4"><img src="images/DaHongPao.jpg" alt="Da Hong Pao Tea"></button>
+                        <h1>Da Hong Pao Tea</h1>
+                        <div class="modal" id="modal4">
+                            <div class="modal_header">
+                                <div class="title"> Da Hong Pao Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> Shaped like knotted knotted ropes, an oolong tea grown in the Wuyi Mountains of China. With a unique orchid fragrance and long-lasting sweet aftertaste, this is truly a tea of its own kind. Traditionally brewed with a Purple Clay Teapot at 100 degrees. To experience this unique brewing method, come visit us in one of our teahouses. </p>
+                                <p id="price"> £1.2 million Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="tea-item">
-                        <img src="images/Gyokuro.jpg" alt="Gyokuro Tea">
-                        <p>Gyokuro Tea</p>
+                        <button class="open_Button" data-modal-target="#modal5"><img src="images/Gyokuro.jpg" alt="Gyokuro Tea"></button>
+                        <h1>Gyokuro Tea</h1>
+                        <div class="modal" id="modal5">
+                            <div class="modal_header">
+                                <div class="title"> Gyokuro Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> Grown in shade, originally from Japan. Its a loose green tea, known for its smooth, sweeth, creamy taste. Can be used to calm the skin and reduce irritation due to its anti-irritant properties. </p>
+                                <p id="price"> £250 Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="tea-item">
-                        <img src="images/Jasmine.jpg" alt="Jasmine Tea">
-                        <p>Jasmine Tea</p>
+                        <button class="open_Button" data-modal-target="#modal6"><img src="images/Jasmine.jpg" alt="Jasmine Tea"></button>
+                        <h1>Jasmine Pearl Tea</h1>
+                        <div class="modal" id="modal6">
+                            <div class="modal_header">
+                                <div class="title"> Jasmine Pearl Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> Hand-made green tea pearls, scented with jasmine over five nights, to create a long-lasting aroma. Grown in Fuijan, China, often regarded as the best jasmine tea out-there. It offers a fresh and sensual experience, and can be brewed up to 3 times, on 70 degrees. Also great as an ice-tea, served with milk. </p>
+                                <p id="price"> £189 Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="tea-item">
-                        <img src="images/JasmineFlower.jpg" alt="Jasmine Flower Tea">
-                        <p>Jasmine Flower Tea</p>
+                        <button class="open_Button" data-modal-target="#modal7"><img src="images/JasmineFlower.jpg" alt="Jasmine Flower Tea"></button>
+                        <h1>Jasmine Flower Tea</h1>
+                        <div class="modal" id="modal7">
+                            <div class="modal_header">
+                                <div class="title"> Jasmine Flower Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> This tea offers an intense floral aroma and a clear yellowish infusion. A perfect gift for tea lovers, due to its unique and beautiful appearance. Once the tea is steeped in water, the buds start to bloom. Creating both a visually and sensually appeasing experience. The tea is a blend of green tea, jasmine tea, and lily flowers. Tastes every bit as good as it looks.</p>
+                                <p id="price"> £280 Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="tea-item">
-                        <img src="images/Junshan.jpg" alt="Junshan Tea">
-                        <p>Junshan Tea</p>
+                        <button class="open_Button" data-modal-target="#modal8"><img src="images/Junshan.jpg" alt="Junshan Tea"></button>
+                        <h1>Jun Shan Yin Zhen Tea</h1>
+                        <div class="modal" id="modal8">
+                            <div class="modal_header">
+                                <div class="title"> Jun Shan Yin Zhen Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> A yellow tea from Junshan Island, also called Silver Needle of the Jun Mountain. A rare tea often sold as a white tea. A famous, rare, and extremely beloved tea from China. We chose the rarest of the rare. The tea consists of buds that have been slowly, lightly oxidised. This process gives the tea a sweet and fruity flavour. Usually only sold to connoisseurs. </p>
+                                <p id="price"> £2,802 Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                     <div class="tea-item">
-                        <img src="images/TieGuanYin.jpg" alt="Tie Guan Yin Tea">
-                        <p>Tie Guan Yin Tea</p>
+                        <button class="open_Button" data-modal-target="#modal9"><img src="images/TieGuanYin.jpg" alt="Tie Guan Yin Tea"></button>
+                        <h1>Tie Guan Yin Tea</h1>
+                        <div class="modal" id="modal9">
+                            <div class="modal_header">
+                                <div class="title"> Tie Guan Yin Tea </div>
+                                <button data-close-button class="close_button">&times;</button>
+                            </div>
+                            <div class="modal_body">
+                                <p> A variety of Chinese oolong tea, often called the Iron Buddha, or the Iron Goddess Oolong. Associated with multiple legends from its area of origin. It offers a creamy texture and divine floral notes. While this tea might not show much of the iron, it has more than enough divine qualities to live up to its name. </p>
+                                <p id="price"> £3,507 Per Kilogram </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </main>
         </div>
+        <div id="overlay"></div>
     </body>
 </html>
